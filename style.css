@@ -1,0 +1,235 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400; /* Normal weight, but can be made bolder where needed */
+}
+
+/* Header Styles */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav img {
+    width: 120px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul li {
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600; /* Make links bolder */
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #f1b2b2;
+}
+
+/* Hero Section */
+.text-box {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px 60px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.text-box h1 {
+    font-size: 48px;
+    font-weight: 700; /* Make the title bolder */
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 22px;
+    font-weight: 600; /* Make the description bold */
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    padding-top: 100px; /* Added padding-top to prevent overlap with fixed header */
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700; /* Make the section headings bolder */
+    margin-bottom: 20px;
+}
+
+/* Info Section */
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 600; /* Make the info box text bolder */
+    overflow: hidden;  /* Ensure content stays within box */
+}
+
+/* Info Box Image */
+.info-box img {
+    max-width: 100%; /* Make sure the image fits inside its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Add space between image and text */
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    font-weight: 700; /* Make the title inside the info box bold */
+}
+
+.info-box p {
+    color: #666;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600; /* Bold the button text */
+    background-color: #f1b2b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #f77c8f;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer a {
+    color: #f1b2b2;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+/* Accordion (Barangay page) */
+.accordion-container {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.accordion {
+    background-color: #fff;
+    color: #444;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Accordion Item Styling */
+.accordion-item {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    font-weight: 700; /* Bold the accordion item title */
+    font-size: 18px;
+}
+
+.accordion-item:hover {
+    background-color: #f1b2b2;
+}
+
+/* Accordion Content Styling */
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 400; /* Keep the content normal weight */
+}
+
+.accordion-content p {
+    margin: 5px 0;
+}
+
+/* Accordion Show Content */
+.accordion-content p strong {
+    font-weight: 700; /* Make the strong text inside accordion content bold */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .accordion-item {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .accordion-content {
+        font-size: 14px;
+    }
+}
