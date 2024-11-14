@@ -1,0 +1,27 @@
+-- Step 1: Create the emergency_hotlines database (if it doesn't exist)
+CREATE DATABASE IF NOT EXISTS emergency_hotlines;
+
+-- Step 2: Use the emergency_hotlines database
+USE emergency_hotlines;
+
+-- Step 3: Create the hotlines table (if it doesn't exist)
+CREATE TABLE IF NOT EXISTS hotlines (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    barangay VARCHAR(255) NOT NULL,
+    police VARCHAR(255),
+    medic VARCHAR(255),
+    fire VARCHAR(255),
+    rescue VARCHAR(255)
+);
+
+-- Step 4: Insert sample data for each barangay
+INSERT INTO hotlines (barangay, police, medic, fire, rescue)
+VALUES 
+('Marawoy', '0917-123-4567', '0917-234-5678', '0917-345-6789', '0917-456-7890'),
+('Sabang', '0917-567-8901', '0917-678-9012', '0917-789-0123', '0917-890-1234'),
+('Inosluban', '0917-234-5678', '0917-345-6789', '0917-456-7890', '0917-567-8901'),
+('Bugtong', '0917-678-9012', '0917-789-0123', '0917-890-1234', '0917-901-2345'),
+('Tanguay', '0917-234-1234', '0917-345-2345', '0917-456-3456', '0917-567-4567'),
+('Tibig', '0917-567-2345', '0917-678-3456', '0917-789-4567', '0917-890-5678'),
+('San Carlos', '0917-345-6789', '0917-456-7890', '0917-567-8901', '0917-678-9012'),
+('Bulacnin', '0917-890-1234', '0917-901-2345', '0917-012-3456', '0917-123-4567');
